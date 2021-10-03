@@ -1,14 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three-orbitcontrols-ts'
-import first_page from './first_page.js'
 
-class App extends Component{
+class first_page extends Component{
   componentDidMount(){
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
@@ -116,7 +114,7 @@ class App extends Component{
 
     render(){
       return(
-        <div className="App">
+        <div className="first_page">
           <div className="search-box">
              <button class="btn-search"><i class="fas fa-search"></i></button>
              <input type="text" class="input-search" placeholder="Type to Search..."></input>
@@ -127,4 +125,4 @@ class App extends Component{
     }
   }
 
-export default App;
+export default first_page;
